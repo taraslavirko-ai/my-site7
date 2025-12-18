@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.subtitle {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+/* ВКЛАДКИ */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.tabs button {
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.tabs button:hover {
+  background: #222;
+  transform: scale(1.05);
+}
+
+/* КОНТЕНТ */
+.tab-content {
+  display: none;
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  animation: fade 0.6s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.good {
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.bad {
+  color: #ff5252;
+}
+
+/* АНІМАЦІЯ */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
